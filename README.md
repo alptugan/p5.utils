@@ -9,4 +9,4 @@
 
 [Pixel Ruler](https://github.com/alptugan/p5.utils/tree/main/examples/1_pixelRuler) | [DOM Debug Window](https://github.com/alptugan/p5.utils/tree/main/examples/2_debugView) | [Get time-stamp](https://#)
 ------------- | ------------- | -------------
-![](examples/1_pixelRuler/ss-ruler.jpg)  | ![](/Users/alptugan/Documents/p5Js/p5.utils/examples/2_debugView/ss-debug.jpg) | ![](#)
+![](examples/1_pixelRuler/ss-ruler.jpg)  | ![](examples/2_debugView/ss-debug.jpg) | ![]()
