@@ -17,8 +17,10 @@ function draw() {
 
 function keyPressed() {
   if (key == 's') {
+    // re-draw ruler
     utils.enableRuler();
   } else if (key == 'h') {
+    // hide ruler
     utils.disableRuler();
   }
 }
