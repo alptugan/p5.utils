@@ -7,44 +7,50 @@
 ------------- | ------------- | -------------
 <a href="https://github.com/alptugan/p5.utils/tree/main/examples/1_pixelRuler"><img src="examples/1_pixelRuler/ss-ruler.jpg" width="100%"></a>  | <a href="https://github.com/alptugan/p5.utils/tree/main/examples/2_debugView"><img src="examples/2_debugView/ss-debug.jpg" width="100%"></a> | <a href="https://github.com/alptugan/p5.utils/tree/main/examples/3_getTimeStamp"><img src="examples/3_getTimeStamp/ss-timestamp.jpg" width="100%"></a>
 
-[4_saveCanvas](#) | [5_arrayResize](#) | [6_fxShadow](#)
+[4_saveCanvas](https://github.com/alptugan/p5.utils/tree/main/examples/4_saveCanvas) | [5_arrayResize](#) | [6_fxShadow](#)
 ------------- | ------------- | -------------
-<a href="#"><img src="examples/4_saveCanvas/exports/ss-savecanvas.png" width="100%"></a>  | <a href="#"><img src="#" width="100%"></a> | <a href="#"><img src="#" width="100%"></a>
+<a href="https://github.com/alptugan/p5.utils/tree/main/examples/4_saveCanvas"><img src="examples/4_saveCanvas/exports/ss-savecanvas.png" width="100%"></a>  | <a href=""><img src="examples/5_arrayResize/exports/ss-resize.jpg" width="100%"></a> | <a href="#"><img src="#" width="100%"></a>
 
 [7_GradientFill](#) | [8_](#) | [9_](#)
 ------------- | ------------- | -------------
 <a href="#"><img src="#" width="100%"></a>  | <a href="#"><img src="#" width="100%"></a> | <a href="#"><img src="#" width="100%"></a>
 
 ## How to use p5.Utils library?
+---
+### Option 1
+[Navigate to p5JS examples collection.](https://editor.p5js.org/alptugan/collections/tUYB1Fn4b)
+
+### Option 2
 1. Download the final minified js version from ["Releases" page](https://github.com/alptugan/p5.utils/releases/download/v0.0.1/p5.utils.min.js).
 2. Upload ```p5.utils.min.js``` to your project folder in p5 editor.
 3. Include the ```p5.utils.min.js``` in the ```index.html``` document before p5.js libs as follows;
-
-```
-    <script src="libraries/p5.min.js"></script>
-    <script src="libraries/p5.sound.min.js"></script>
-    <script src="libraries/p5.utils.min.js"></script>
-```
+     ```
+     <script src="libraries/p5.min.js"></script>
+     <script src="libraries/p5.sound.min.js"></script>
+     <script src="libraries/p5.utils.min.js"></script>
+     ```
 4. Declare and initialize the lib before the ```setup()``` prefably as follows;
 
-```
-var utils = new p5.Utils();
-```
-5. Now you can call any method defined in ```p5.utils```library using dot notation as follows in ```setup()``` or any other custom methods in your code;
+     ```
+     var utils = new p5.Utils();
+     ```
+5. Now you can call any <a href="#functions">methods</a> defined in ```p5.utils``` library using dot notation as follows in ```setup()``` or any other custom methods in your code;
 
-```
-utils.enablerRuler(); 
-```
+     ```
+     utils.enablerRuler(); 
+     ```
 
 ## Reference
+---
 ### p5.Utils library
 p5.Utils extends p5 with several functionalities including cheaper drawingcontext effects, pixel ruler (useful for new commers), array operations, file naming, dom based debug window to avoid rendering text in p5JS.
 
+<a name="functions"></a>
 ## Functions
 
 <dl>
 <dt><a href="#debug">debug(_itemName)</a></dt>
-<dd><p>Create Debug Div cause p5 font is expensive.</p>
+<dd><p>Creates Debug Div cause p5 font is expensive.</p>
 </dd>
 <dt><a href="#getTimeStamp">getTimeStamp([_date])</a> ⇒ <code>String</code></dt>
 <dd><p>Timestamp function useful for file naming to avoid overwrite issues.</p>
