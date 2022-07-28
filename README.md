@@ -1,7 +1,7 @@
 # p5.utils
  A set of utilities and additional features for my creative coding class aiming to help students while introducing the algorithmic thinking.  
 
-## The list of utilities in p5.Utils repository;
+## The list of utilities in p5.Utils repository. Click on thumbnails to access examples;
 
 [1_pixelRuler](https://github.com/alptugan/p5.utils/tree/main/examples/1_pixelRuler) | [2_debugView](https://github.com/alptugan/p5.utils/tree/main/examples/2_debugView) | [3_getTimeStamp](https://github.com/alptugan/p5.utils/tree/main/examples/3_getTimeStamp)
 ------------- | ------------- | -------------
@@ -9,7 +9,7 @@
 
 [4_saveCanvas](#) | [5_arrayResize](#) | [6_fxShadow](#)
 ------------- | ------------- | -------------
-<a href="#"><img src="#" width="100%"></a>  | <a href="#"><img src="#" width="100%"></a> | <a href="#"><img src="#" width="100%"></a>
+<a href="#"><img src="examples/4_saveCanvas/exports/ss-savecanvas.png" width="100%"></a>  | <a href="#"><img src="#" width="100%"></a> | <a href="#"><img src="#" width="100%"></a>
 
 [7_GradientFill](#) | [8_](#) | [9_](#)
 ------------- | ------------- | -------------
