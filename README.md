@@ -3,10 +3,17 @@
 
 ## The list of utilities in p5.Utils repository;
 
-[Pixel Ruler](https://github.com/alptugan/p5.utils/tree/main/examples/1_pixelRuler) | [DOM Debug Window](https://github.com/alptugan/p5.utils/tree/main/examples/2_debugView) | [Get time-stamp](https://#)
+[1_pixelRuler](https://github.com/alptugan/p5.utils/tree/main/examples/1_pixelRuler) | [2_debugView](https://github.com/alptugan/p5.utils/tree/main/examples/2_debugView) | [3_getTimeStamp](https://github.com/alptugan/p5.utils/tree/main/examples/3_getTimeStamp)
 ------------- | ------------- | -------------
-<a href="https://github.com/alptugan/p5.utils/tree/main/examples/1_pixelRuler"><img src="examples/1_pixelRuler/ss-ruler.jpg" width="100%"></a>  | <a href="https://github.com/alptugan/p5.utils/tree/main/examples/2_debugView"><img src="examples/2_debugView/ss-debug.jpg" width="100%"></a> | <a href=""><img src="examples/3_getTimeStamp/ss-timestamp.jpg" width="100%"></a>
+<a href="https://github.com/alptugan/p5.utils/tree/main/examples/1_pixelRuler"><img src="examples/1_pixelRuler/ss-ruler.jpg" width="100%"></a>  | <a href="https://github.com/alptugan/p5.utils/tree/main/examples/2_debugView"><img src="examples/2_debugView/ss-debug.jpg" width="100%"></a> | <a href="https://github.com/alptugan/p5.utils/tree/main/examples/3_getTimeStamp"><img src="examples/3_getTimeStamp/ss-timestamp.jpg" width="100%"></a>
 
+[4_saveCanvas](#) | [5_arrayResize](#) | [6_fxShadow](#)
+------------- | ------------- | -------------
+<a href="#"><img src="#" width="100%"></a>  | <a href="#"><img src="#" width="100%"></a> | <a href="#"><img src="#" width="100%"></a>
+
+[7_GradientFill](#) | [8_](#) | [9_](#)
+------------- | ------------- | -------------
+<a href="#"><img src="#" width="100%"></a>  | <a href="#"><img src="#" width="100%"></a> | <a href="#"><img src="#" width="100%"></a>
 
 ## How to use p5.Utils library?
 1. Download the final minified js version from ["Releases" page](https://github.com/alptugan/p5.utils/releases/download/v0.0.1/p5.utils.min.js).
