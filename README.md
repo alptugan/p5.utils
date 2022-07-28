@@ -13,7 +13,7 @@
 
 [7_GradientFill](https://github.com/alptugan/p5.utils/tree/main/examples/7_GradientFill) | [8_RadialGradientFill](#) | [9_Countdown](#)
 ------------- | ------------- | -------------
-<a href="https://github.com/alptugan/p5.utils/tree/main/examples/7_GradientFill"><img src="examples/7_GradientFill/ss-linearGradientFill.png" width="90%"></a>  | <a href="#"><img src="examples/empty.png" width="100%"></a> | <a href="#"><img src="examples/empty.png" width="100%"></a>
+<a href="https://github.com/alptugan/p5.utils/tree/main/examples/7_GradientFill"><img src="examples/7_GradientFill/ss-linearGradientFill.png" width="100%"></a>  | <a href="#"><img src="examples/empty.png" width="100%"></a> | <a href="#"><img src="examples/empty.png" width="100%"></a>
 
 ## How to use p5.Utils library?
 ---
@@ -52,7 +52,7 @@ p5.Utils extends p5 with several functionalities including cheaper drawingcontex
 
 <dl>
 <dt><a href="#debug">debug(_itemName)</a></dt>
-<dd><p>Creates Debug Div cause p5 font is expensive.</p>
+<dd><p>Create Debug Div cause p5 font is expensive.</p>
 </dd>
 <dt><a href="#getTimeStamp">getTimeStamp([_date])</a> ⇒ <code>String</code></dt>
 <dd><p>Timestamp function useful for file naming to avoid overwrite issues.</p>
@@ -60,24 +60,33 @@ p5.Utils extends p5 with several functionalities including cheaper drawingcontex
 <dt><a href="#saveCanvas">saveCanvas([_prefix], [_suffix])</a></dt>
 <dd><p>Utilizes p5JS saveCanvas function to make it easier file saving process by combining the function with getTimeStamp() method.</p>
 </dd>
+<dt><a href="#arrayResize">arrayResize(_arr, _newSize, [_defaultValue])</a> ⇒ <code>Array.&lt;Number&gt;</code> | <code>Array.&lt;String&gt;</code> | <code>Array.&lt;Boolean&gt;</code></dt>
+<dd><p>Resizes an array and returns it. Similar to vectors resize in C++.</p>
+</dd>
 <dt><a href="#beginShadow">beginShadow(_color, _shadowBlur, _shadowOffsetX, _shadowOffsetY)</a></dt>
 <dd><p>Creates shadow effect usign drawing context. Must be used with <a href="#endShadow">endShadow</a> method. See examples for how to use it.</p>
 </dd>
 <dt><a href="#endShadow">endShadow()</a></dt>
-<dd><p>Stops shadow effect for the following graphics on the canvas.</p>
+<dd><p>Stops shadow effect for the following graphics on the canvas. For example usage <a href="#beginShadow">beginShadow</a> page.</p>
 </dd>
 <dt><a href="#beginLinearGradient">beginLinearGradient(_colorsArr, _startX, _startY, _endX, _endY, _colorsRatio)</a></dt>
-<dd><p>Default Context 2D Gradient fill style. </p>
+<dd><p>Default Context 2D Gradient fill style. Must be used with <a href="#endLinearGradient">endLinearGradient</a> method. See examples for how to use it.</p>
 <p>Reference: <a><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createLinearGradient">https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createLinearGradient</a></a></p>
 </dd>
 <dt><a href="#endLinearGradient">endLinearGradient()</a></dt>
-<dd><p>Stop Gradient fill for the following graphics.</p>
+<dd><p>Stop Gradient fill for the following graphics. Must be used with <a href="#beginLinearGradient">beginLinearGradient</a> method. See examples for how to use it.</p>
+</dd>
+<dt><a href="#text">text(_txt, _x, _y, [_size], [_font], [_alignH], [_alighV])</a></dt>
+<dd><p>Set the style and display the text in a single method. See <a href="#getTimeStamp">getTimeStamp</a> example on how to use the function.</p>
+</dd>
+<dt><a href="#notify">notify(_on_every_nth_second)</a> ⇒ <code>boolean</code></dt>
+<dd><p>returns true every nth second in draw function</p>
 </dd>
 <dt><a href="#disableRuler">disableRuler()</a></dt>
 <dd><p>Removes the ruler graphics from the canvas.</p>
 </dd>
 <dt><a href="#enableRuler">enableRuler()</a></dt>
-<dd><p>Ruler for newcomers to show pixel meter</p>
+<dd><p>Ruler for newcomers to show pixel meter.</p>
 </dd>
 </dl>
 
@@ -110,10 +119,15 @@ Timestamp function useful for file naming to avoid overwrite issues.
 
 **Kind**: global function  
 **Returns**: <code>String</code> - Current date + time depending on _date argument value. 
+
 When _date = true;
+
 The return format is Year-Month-Day_Hour-Minute-Second
+
 When _date = false;
- The return format is Hour-Minute-Second  
+
+The return format is Hour-Minute-Second  
+**See**: [text](#text)  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -123,7 +137,46 @@ When _date = false;
 ```js
 // Define global variable and initialize p5.Utils lib
 var utils = new p5.Utils();
-var currentTime = utils.getTimeStamp();
+
+// Font source:
+// https://www.dafont.com/lcd-at-t-phone-time-date.font
+var cutomFontName = "LCDAT&TPhoneTimeDate.ttf";
+
+function setup() {
+  createCanvas(600, 600);
+  //noLoop();
+}
+
+function draw() {
+  background(200);
+
+  // get current time stamp within date
+  var currentTime = utils.getTimeStamp();
+  //print(currentTime);
+
+  // write it to canvas using utils's text function 
+  fill(255, 100, 20);
+  utils.text(
+    currentTime,        // string to display
+    width * 0.5 - 100,   // x position
+    height * 0.5 - 60,  // y position
+    16
+  );
+
+  // get current time stamp without date
+  var currentTime2 = utils.getTimeStamp(false);
+  fill(90, 90, 90);
+  // write it to canvas using utils's text function 
+  utils.text(
+    currentTime2,   // string to display
+    width * 0.5,   // x position
+    height * 0.5,  // y position
+    80,            // fontsize
+    cutomFontName,  // custom font
+    CENTER,        // text alignment horizontal
+    CENTER);       // text alignment vertical
+
+}
 ```
 <a name="saveCanvas"></a>
 
@@ -139,15 +192,101 @@ Utilizes p5JS saveCanvas function to make it easier file saving process by combi
 
 **Example**  
 ```js
+var x, y, px, py;
+var jump = 10;
+var ptime = 2000;
+
+// Init global utils var
+var utils = new p5.Utils();
+var counter = 0;
+
+function setup() {
+  createCanvas(600, 600);
+
+  x = width * 0.5;
+  y = height * 0.5;
+  px = x;
+  py = y;
+  background(180);
+}
+
+function draw() {
+  //background(180, 1);
+  px = x;
+  py = y;
+
+
+  // Basic random walker algorithm
+  var dice = random();
+
+  if (dice < 0.25) {
+    x += jump;
+  } else if (dice < 0.5) {
+    x -= jump;
+  } else if (dice < 0.75) {
+    y += jump;
+  } else {
+    y -= jump;
+  }
+
+  strokeWeight(5);
+  stroke("#ffcc00");
+  noFill();
+  beginShape();
+  vertex(x, y);
+  vertex(px, py);
+  endShape();
+
+  // Automated saveCanvas for every 10th second
+  if (utils.notify(10) == true && counter < 4) {
+    ptime = millis();
+
+    // save current canvas image with default attributes
+    utils.saveCanvas();
+
+    // or you can set prefix and file extension argument
+    // utils.saveCanvas("randomWalker","jpg");
+
+    // clear the canvas again
+    background(180);
+
+
+    // set starting position to middle of the canvas
+    x = width * 0.5;
+    y = height * 0.5;
+    px = x;
+    py = y;
+
+    counter++;
+  }
+
+}
+```
+<a name="arrayResize"></a>
+
+## arrayResize(_arr, _newSize, [_defaultValue]) ⇒ <code>Array.&lt;Number&gt;</code> \| <code>Array.&lt;String&gt;</code> \| <code>Array.&lt;Boolean&gt;</code>
+Resizes an array and returns it. Similar to vectors resize in C++.
+
+**Kind**: global function  
+**Returns**: <code>Array.&lt;Number&gt;</code> \| <code>Array.&lt;String&gt;</code> \| <code>Array.&lt;Boolean&gt;</code> - The new array  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| _arr | <code>Array.&lt;Number&gt;</code> \| <code>Array.&lt;String&gt;</code> \| <code>Array.&lt;Boolean&gt;</code> |  | The array to be resized |
+| _newSize | <code>Number</code> |  | The new size of the array |
+| [_defaultValue] | <code>Number</code> \| <code>String</code> \| <code>Boolean</code> | <code>-1</code> | Default value for all members of the new array. |
+
+**Example**  
+```js
 // Define global variable and initialize p5.Utils lib
 var utils = new p5.Utils();
-function keyPressed() {
-     if(key == 's') {
-         utils.saveCanvas("myProject", "png");
-         // or without any argument
-         // utils.saveCanvas();
-     }
-}
+var arr = [];
+arr = utils.arrayResize(arr,10);
+print(arr);
+
+// or assign default values
+arr = utils.arrayResize(arr, 22, random(0,1));
+print(arr);
 ```
 <a name="beginShadow"></a>
 
@@ -180,14 +319,14 @@ function draw() {
 <a name="endShadow"></a>
 
 ## endShadow()
-Stops shadow effect for the following graphics on the canvas.
+Stops shadow effect for the following graphics on the canvas. For example usage [beginShadow](#beginShadow) page.
 
 **Kind**: global function  
 **See**: For example usage [beginShadow](#beginShadow) page.  
 <a name="beginLinearGradient"></a>
 
 ## beginLinearGradient(_colorsArr, _startX, _startY, _endX, _endY, _colorsRatio)
-Default Context 2D Gradient fill style. 
+Default Context 2D Gradient fill style. Must be used with [endLinearGradient](#endLinearGradient) method. See examples for how to use it.
 
 Reference: <a>https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createLinearGradient</a>
 
@@ -208,27 +347,79 @@ Reference: <a>https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingCo
 var utils = new p5.Utils();
 
 function setup() {
-     createCanvas(400,400);
+  createCanvas(600, 600);
+  noLoop();
 }
 
 function draw() {
-     utils.beginLinearGradient(
-     [color(100,100,0),color(100,130,200)], 
-     width*0.5 - 100, 
-     height*0.5 - 100, 
-     width*0.5+100, 
-     height*0.5+100);
-     circle(width*0.5, height*0.5,500);
-     utils.endLinearGradient();
+
+  background(220);
+
+  noStroke();
+
+  // Begin gradient fill
+  utils.beginLinearGradient(
+    ["#FFCC00", color(34, 116, 165), color(126, 161, 114)],//Colors
+    width * 0.5 - 100,    // gradient begin point x     
+    height * 0.5 - 100,   // gradient begin point y
+    width * 0.5 + 100,    // gradient end point x
+    height * 0.5 + 100,   // gradient end point y
+    [0, 0.5, 1]           // Position of each color.
+  );
+
+  circle(width * 0.5, height * 0.5, 400);
+
+  // End gradient fill
+  utils.endLinearGradient();
+}
+
+function keyPressed() {
+  if (key == 's')
+    utils.saveCanvas("linearGradientFill");
 }
 ```
 <a name="endLinearGradient"></a>
 
 ## endLinearGradient()
-Stop Gradient fill for the following graphics.
+Stop Gradient fill for the following graphics. Must be used with [beginLinearGradient](#beginLinearGradient) method. See examples for how to use it.
 
 **Kind**: global function  
 **See**: For example usage [beginLinearGradient](#beginLinearGradient) page.  
+<a name="text"></a>
+
+## text(_txt, _x, _y, [_size], [_font], [_alignH], [_alighV])
+Set the style and display the text in a single method. See [getTimeStamp](#getTimeStamp) example on how to use the function.
+
+**Kind**: global function  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| _txt | <code>String</code> \| <code>Number</code> |  | Text or number to be displayed |
+| _x | <code>Number</code> |  | X position of the text |
+| _y | <code>Number</code> |  | Y position of the text |
+| [_size] | <code>Number</code> | <code>12</code> | Font size |
+| [_font] | <code>String</code> | <code>&quot;sans-serif&quot;</code> | Custom Font face. See example [getTimeStamp](#getTimeStamp) |
+| [_alignH] | <code>Constant</code> | <code>LEFT</code> | Text horizontal align |
+| [_alighV] | <code>Constant</code> | <code>TOP</code> | Text vertical align |
+
+<a name="notify"></a>
+
+## notify(_on_every_nth_second) ⇒ <code>boolean</code>
+returns true every nth second in draw function
+
+**Kind**: global function  
+**See**: [saveCanvas](#saveCanvas) method for the example.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| _on_every_nth_second | <code>Number</code> | Set notifier frequency. The input value needs to be in seconds. |
+
+**Example**  
+```js
+if (utils.notify(10) == true) {
+     // do something here.
+}
+```
 <a name="disableRuler"></a>
 
 ## disableRuler()
@@ -239,9 +430,10 @@ Removes the ruler graphics from the canvas.
 <a name="enableRuler"></a>
 
 ## enableRuler()
-Ruler for newcomers to show pixel meter
+Ruler for newcomers to show pixel meter.
 
 **Kind**: global function  
+**See**: [disableRuler](#disableRuler)  
 **Example**  
 ```js
 // Define global variable and initialize p5.Utils lib
@@ -266,4 +458,3 @@ function keyPressed() {
      }
 }
 ```
-
