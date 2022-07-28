@@ -9,7 +9,7 @@
 
 [4_saveCanvas](https://github.com/alptugan/p5.utils/tree/main/examples/4_saveCanvas) | [5_arrayResize](#) | [6_fxShadow](#)
 ------------- | ------------- | -------------
-<a href="https://github.com/alptugan/p5.utils/tree/main/examples/4_saveCanvas"><img src="examples/4_saveCanvas/exports/ss-savecanvas.png" width="100%"></a>  | <a href=""><img src="examples/5_arrayResize/exports/ss-resize.jpg" width="100%"></a> | <a href="#"><img src="#" width="100%"></a>
+<a href="https://github.com/alptugan/p5.utils/tree/main/examples/4_saveCanvas"><img src="examples/4_saveCanvas/exports/ss-savecanvas.png" width="100%"></a>  | <a href=""><img src="examples/5_arrayResize/exports/ss-resize.jpg" width="100%"></a> | <a href="#"><img src="examples/6_fxShadow/ss-shadow.jpg" width="100%"></a>
 
 [7_GradientFill](#) | [8_](#) | [9_](#)
 ------------- | ------------- | -------------
