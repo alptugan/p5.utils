@@ -5,7 +5,7 @@
 
 [Pixel Ruler](https://github.com/alptugan/p5.utils/tree/main/examples/1_pixelRuler) | [DOM Debug Window](https://github.com/alptugan/p5.utils/tree/main/examples/2_debugView) | [Get time-stamp](https://#)
 ------------- | ------------- | -------------
-<a href="https://github.com/alptugan/p5.utils/tree/main/examples/1_pixelRuler"><img src="examples/1_pixelRuler/ss-ruler.jpg" width="100%"></a>  | <img src="examples/2_debugView/ss-debug.jpg" width="100%"> | <img src="examples/2_debugView/ss-debug.jpg" width="100%">
+<a href="https://github.com/alptugan/p5.utils/tree/main/examples/1_pixelRuler"><img src="examples/1_pixelRuler/ss-ruler.jpg" width="100%"></a>  | <a href="https://github.com/alptugan/p5.utils/tree/main/examples/2_debugView"><img src="examples/2_debugView/ss-debug.jpg" width="100%"></a> | <a href=""><img src="examples/3_getTimeStamp/ss-timestamp.jpg" width="100%"></a>
 
 
 ## How to use p5.Utils library?
