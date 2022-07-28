@@ -7,18 +7,20 @@
 ------------- | ------------- | -------------
 <a href="https://github.com/alptugan/p5.utils/tree/main/examples/1_pixelRuler"><img src="examples/1_pixelRuler/ss-ruler.jpg" width="100%"></a>  | <a href="https://github.com/alptugan/p5.utils/tree/main/examples/2_debugView"><img src="examples/2_debugView/ss-debug.jpg" width="100%"></a> | <a href="https://github.com/alptugan/p5.utils/tree/main/examples/3_getTimeStamp"><img src="examples/3_getTimeStamp/ss-timestamp.jpg" width="100%"></a>
 
-[4_saveCanvas](https://github.com/alptugan/p5.utils/tree/main/examples/4_saveCanvas) | [5_arrayResize](#) | [6_fxShadow](#)
+[4_saveCanvas](https://github.com/alptugan/p5.utils/tree/main/examples/4_saveCanvas) | [5_arrayResize](https://github.com/alptugan/p5.utils/tree/main/examples/5_arrayResize) | [6_fxShadow](https://github.com/alptugan/p5.utils/tree/main/examples/6_fxShadow)
 ------------- | ------------- | -------------
-<a href="https://github.com/alptugan/p5.utils/tree/main/examples/4_saveCanvas"><img src="examples/4_saveCanvas/exports/ss-savecanvas.png" width="100%"></a>  | <a href=""><img src="examples/5_arrayResize/exports/ss-resize.jpg" width="100%"></a> | <a href="#"><img src="examples/6_fxShadow/ss-shadow.jpg" width="100%"></a>
+<a href="https://github.com/alptugan/p5.utils/tree/main/examples/4_saveCanvas"><img src="examples/4_saveCanvas/exports/ss-savecanvas.png" width="100%"></a> | <a href="https://github.com/alptugan/p5.utils/tree/main/examples/5_arrayResize"><img src="examples/5_arrayResize/exports/ss-resize.jpg" width="100%"></a> | <a href="https://github.com/alptugan/p5.utils/tree/main/examples/6_fxShadow"><img src="examples/6_fxShadow/ss-shadow.jpg" width="100%"></a>
 
 [7_GradientFill](#) | [8_](#) | [9_](#)
 ------------- | ------------- | -------------
-<a href="#"><img src="#" width="100%"></a>  | <a href="#"><img src="#" width="100%"></a> | <a href="#"><img src="#" width="100%"></a>
+<a href="#"><img src="examples/7_GradientFill/ss-linearGradientFill.png" width="100%"></a>  | <a href="#"><img src="#" width="100%"></a> | <a href="#"><img src="#" width="100%"></a>
 
 ## How to use p5.Utils library?
 ---
 ### Option 1
-[Navigate to p5JS examples collection.](https://editor.p5js.org/alptugan/collections/tUYB1Fn4b)
+1. [Navigate to p5JS examples collection.](https://editor.p5js.org/alptugan/collections/tUYB1Fn4b)
+2. Click on p5.utils.template.
+3. Hit CMD+s (or File->Save). This will create a copy of required files in your P5JS account. 
 
 ### Option 2
 1. Download the final minified js version from ["Releases" page](https://github.com/alptugan/p5.utils/releases/download/v0.0.1/p5.utils.min.js).
