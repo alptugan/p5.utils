@@ -17,12 +17,12 @@
 
 ## How to use p5.Utils library?
 ---
-### Option 1 (Quick Start)
+### Option 1 (Quick Start via P5JS Online Editor)
 1. [Navigate to p5JS examples collection.](https://editor.p5js.org/alptugan/collections/tUYB1Fn4b)
 2. Click on p5.utils.template.
 3. Hit CMD+s (or File->Save). This will create a copy of required files in your P5JS account. Whenever you need to access ```p5.utils``` you can follow the same steps.
 
-### Option 2 (For intermediate/advanced users)
+### Option 2 (If you are using local text editor like VSCode for development)
 1. Download the final minified js version from ["Releases" page](https://github.com/alptugan/p5.utils/releases/download/v0.0.1/p5.utils.min.js).
 2. Upload ```p5.utils.min.js``` to your project folder in p5 editor.
 3. Include the ```p5.utils.min.js``` in the ```index.html``` document before p5.js libs as follows;
@@ -41,6 +41,12 @@
      ```
      utils.enablerRuler(); 
      ```
+### Option 3 (Import the lib. using CDN service)
+1. Include CDN source to you ```ìndex.html```.
+  ```
+  <script src="https://cdn.jsdelivr.net/gh/alptugan/p5.utils@latest/src/p5.utils.min.js"></script>
+  ```
+2. Repeat the above steps 4 and 5.
 
 ## Reference
 ---
