@@ -2,7 +2,7 @@
 var utils = new p5.Utils();
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(innerWidth, innerHeight);
 
   // Call the method "enableRuler()" 
   // to display pixel ruler
@@ -12,6 +12,7 @@ function setup() {
 function draw() {
   background(220);
 
+  fill(255)
   rect(200, 223, 200, 100);
 }
 
