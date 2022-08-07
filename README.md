@@ -1,6 +1,6 @@
 
-## Check [OpenProcessing](https://openprocessing.org/user/68647/?o=7&view=sketches) page for live examples.
-
+## Check [OpenProcessing](https://openprocessing.org/user/68647/?o=7&view=sketches) page for live examples to see them in action. You can add the library to your OP project directly from the UI. 
+---
 
 # p5.utils Library
  A set of utilities and additional features for my creative coding class aiming to help students while introducing the algorithmic thinking.  
