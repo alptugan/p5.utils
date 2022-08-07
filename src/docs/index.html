@@ -58,6 +58,16 @@
               
                 
                 <li><a
+                  href='#getrandomint'
+                  class="">
+                  getRandomInt
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#savecanvas'
                   class="">
                   saveCanvas
@@ -91,6 +101,26 @@
                   href='#endshadow'
                   class="">
                   endShadow
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#beginradialgradient'
+                  class="">
+                  beginRadialGradient
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#endradialgradient'
+                  class="">
+                  endRadialGradient
                   
                 </a>
                 
@@ -138,6 +168,16 @@
               
                 
                 <li><a
+                  href='#setrulerstyle'
+                  class="">
+                  setRulerStyle
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#disableruler'
                   class="">
                   disableRuler
@@ -176,7 +216,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/c7f866f031f2b20a2667585e2c40fdf71a8ff597/src/p5.utils.js#L39-L43'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L33-L37'>
       <span>src/p5.utils.js</span>
       </a>
     
@@ -190,7 +230,7 @@
   
 
   
-  <div>Version: 0.0.1</div>
+  <div>Version: 0.1.0</div>
   
   <div>Author: Alp Tuğan</div>
   
@@ -238,7 +278,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/c7f866f031f2b20a2667585e2c40fdf71a8ff597/src/p5.utils.js#L60-L91'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L54-L85'>
       <span>src/p5.utils.js</span>
       </a>
     
@@ -320,7 +360,7 @@ utils.debug(
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/c7f866f031f2b20a2667585e2c40fdf71a8ff597/src/p5.utils.js#L153-L169'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L147-L163'>
       <span>src/p5.utils.js</span>
       </a>
     
@@ -329,7 +369,7 @@ utils.debug(
 
   <p>Timestamp function useful for file naming to avoid overwrite issues.</p>
 
-    <div class='pre p1 fill-light mt0'>getTimeStamp(_date: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></div>
+    <div class='pre p1 fill-light mt0'>getTimeStamp(_date: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
   
   
 
@@ -362,7 +402,7 @@ utils.debug(
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
         Current date + time depending on _date argument value.
 <p>When _date = true;</p>
 <p>The return format is Year-Month-Day_Hour-Minute-Second</p>
@@ -451,21 +491,21 @@ utils.debug(
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='savecanvas'>
-      saveCanvas
+    <h3 class='fl m0' id='getrandomint'>
+      getRandomInt
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/c7f866f031f2b20a2667585e2c40fdf71a8ff597/src/p5.utils.js#L247-L254'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L173-L178'>
       <span>src/p5.utils.js</span>
       </a>
     
   </div>
   
 
-  <p>Utilizes p5JS saveCanvas function to make it easier file saving process by combining the function with getTimeStamp() method.</p>
+  <p>Generates and returns a random integer between min and max number</p>
 
-    <div class='pre p1 fill-light mt0'>saveCanvas(_prefix: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>), _suffix: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</div>
+    <div class='pre p1 fill-light mt0'>getRandomInt(_min: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _max: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
   
   
 
@@ -482,7 +522,92 @@ utils.debug(
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>_prefix</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)
+            <span class='code bold'>_min</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    Floor value of the random number
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_max</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    Ceil value of the random number
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        Result will be integer
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='savecanvas'>
+      saveCanvas
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L258-L265'>
+      <span>src/p5.utils.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Utilizes p5JS saveCanvas function to make it easier file saving process by combining the function with getTimeStamp() method.</p>
+
+    <div class='pre p1 fill-light mt0'>saveCanvas(_prefix: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>), _suffix: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_prefix</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)
             = <code>&quot;&quot;</code>)</code>
 	    Any relevant text in the begining of the file name. If it is leaved empty, the file name will be Year-Month-Day_Hour-Minute-Second.PNG
 
@@ -492,7 +617,7 @@ utils.debug(
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>_suffix</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+            <span class='code bold'>_suffix</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
             = <code>&quot;png&quot;</code>)</code>
 	    The file extension JPG, PNG, ...
 
@@ -609,7 +734,7 @@ utils.debug(
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/c7f866f031f2b20a2667585e2c40fdf71a8ff597/src/p5.utils.js#L274-L283'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L285-L294'>
       <span>src/p5.utils.js</span>
       </a>
     
@@ -618,7 +743,7 @@ utils.debug(
 
   <p>Resizes an array and returns it. Similar to vectors resize in C++.</p>
 
-    <div class='pre p1 fill-light mt0'>arrayResize(_arr: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>>), _newSize: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, _defaultValue: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)): (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>>)</div>
+    <div class='pre p1 fill-light mt0'>arrayResize(_arr: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>>), _newSize: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _defaultValue: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)): (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>>)</div>
   
   
 
@@ -635,7 +760,7 @@ utils.debug(
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>_arr</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>>))</code>
+            <span class='code bold'>_arr</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>>))</code>
 	    The array to be resized
 
           </div>
@@ -644,7 +769,7 @@ utils.debug(
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>_newSize</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+            <span class='code bold'>_newSize</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
 	    The new size of the array
 
           </div>
@@ -653,7 +778,7 @@ utils.debug(
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>_defaultValue</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)
+            <span class='code bold'>_defaultValue</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)
             = <code>-1</code>)</code>
 	    Default value for all members of the new array.
 
@@ -669,7 +794,7 @@ utils.debug(
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>>)</code>:
+      <code>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>>)</code>:
         The new array
 
       
@@ -718,16 +843,16 @@ print(arr);</pre>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/c7f866f031f2b20a2667585e2c40fdf71a8ff597/src/p5.utils.js#L307-L313'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L318-L324'>
       <span>src/p5.utils.js</span>
       </a>
     
   </div>
   
 
-  <p>Creates shadow effect usign drawing context. Must be used with <a href="#endshadow">endShadow</a> method. See examples for how to use it.</p>
+  <p>Creates shadow effect using drawing context. Must be used with <a href="#endshadow">endShadow</a> method. See examples for how to use it.</p>
 
-    <div class='pre p1 fill-light mt0'>beginShadow(_color: (p5.Color | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>), _shadowBlur: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, _shadowOffsetX: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, _shadowOffsetY: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</div>
+    <div class='pre p1 fill-light mt0'>beginShadow(_color: (p5.Color | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>), _shadowBlur: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _shadowOffsetX: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _shadowOffsetY: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
   
   
 
@@ -744,7 +869,7 @@ print(arr);</pre>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>_color</span> <code class='quiet'>((p5.Color | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>))</code>
+            <span class='code bold'>_color</span> <code class='quiet'>((p5.Color | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>))</code>
 	    The color can be declared as 
 <code>color(r,g,b,a)</code>
  or in hexadecimal format 
@@ -757,7 +882,7 @@ print(arr);</pre>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>_shadowBlur</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+            <span class='code bold'>_shadowBlur</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
 	    Blur amount of the shadow.
 
           </div>
@@ -766,7 +891,7 @@ print(arr);</pre>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>_shadowOffsetX</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+            <span class='code bold'>_shadowOffsetX</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
 	    Shadow offset for x axis.
 
           </div>
@@ -775,7 +900,7 @@ print(arr);</pre>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>_shadowOffsetY</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+            <span class='code bold'>_shadowOffsetY</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
 	    Shadow offset for y axis.
 
           </div>
@@ -833,14 +958,14 @@ print(arr);</pre>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/c7f866f031f2b20a2667585e2c40fdf71a8ff597/src/p5.utils.js#L320-L322'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L332-L334'>
       <span>src/p5.utils.js</span>
       </a>
     
   </div>
   
 
-  <p>Stops shadow effect for the following graphics on the canvas. For example usage <a href="#beginshadow">beginShadow</a> page.</p>
+  <p>Clears shadow effect for the following graphics on the canvas. For example usage check <a href="#beginshadow">beginShadow</a>.</p>
 
     <div class='pre p1 fill-light mt0'>endShadow()</div>
   
@@ -863,9 +988,230 @@ print(arr);</pre>
     <div class='py1 quiet mt1 prose-big'>Related</div>
     
       
-        For example usage 
-<a href="#beginshadow">beginShadow</a>
- page.
+        <a href="#beginshadow">beginShadow</a>
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='beginradialgradient'>
+      beginRadialGradient
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L372-L405'>
+      <span>src/p5.utils.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Default Context 2D Radial Gradient fill style. Must be used with <a href="#endradialgradient">endRadialGradient</a> method. See examples for how to use it.
+Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createRadialGradient">https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createRadialGradient</a></p>
+
+    <div class='pre p1 fill-light mt0'>beginRadialGradient(_colorsArr: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;p5.Color> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>), _startX: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _startY: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _rad: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _endX: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _endY: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _rOuter: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _ratio: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_colorsArr</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;p5.Color> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>))</code>
+	    List of colors in the gradient fill.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_startX</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    The x-axis coordinate of the start point.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_startY</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    The y-axis coordinate of the start point.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_rad</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    Radius of the first radiant gradient space.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_endX</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
+            = <code>-1</code>)</code>
+	    The x-axis coordinate of the end point. If you leave it as -1, the function set _endX=_startX.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_endY</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
+            = <code>-1</code>)</code>
+	    The y-axis coordinate of the end point. If you leave it as -1, the function set _endY=_startY
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_rOuter</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
+            = <code>-1</code>)</code>
+	    Radius of the outer radiant gradient space. If you leave it as -1, the function set _rOuter=_rad and _rad=_rad*0.1
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_ratio</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
+            = <code>-1</code>)</code>
+	    The distribution weight of colors. The values must be between 0 - 1. Conventionally, if you include three colors, set the first one to 0, the last one to 1, and the middle one depends on your choice(0-1). The method automatically assign start and stop values, if you do not specify any value they will be generated randomly.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// Declare global utils var</span>
+<span class="hljs-keyword">var</span> utils = <span class="hljs-keyword">new</span> p5.Utils();
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
+     createCanvas(innerWidth, innerHeight);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">draw</span>(<span class="hljs-params"></span>) </span>{
+ background(<span class="hljs-number">200</span>);
+ utils.beginRadialGradient(
+     [<span class="hljs-string">&quot;#ffcc00&quot;</span>,<span class="hljs-string">&quot;#ccff00&quot;</span>,<span class="hljs-string">&quot;#ff0000&quot;</span>],
+     width*<span class="hljs-number">0.5</span>,
+     height*<span class="hljs-number">0.5</span>,
+     <span class="hljs-number">100</span>,
+     width*<span class="hljs-number">0.5</span> + <span class="hljs-number">100</span>,
+     height*<span class="hljs-number">0.5</span> + <span class="hljs-number">100</span>,
+     <span class="hljs-number">400</span>);
+ circle(width*<span class="hljs-number">0.5</span>, height*<span class="hljs-number">0.5</span>,<span class="hljs-number">400</span>);
+ utils.endRadialGradient();        
+
+}</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='endradialgradient'>
+      endRadialGradient
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L414-L416'>
+      <span>src/p5.utils.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Stops radial gradient fill for the following graphics on the canvas. For example usage check <a href="#beginradialgradient">beginRadialGradient</a> page.</p>
+
+    <div class='pre p1 fill-light mt0'>endRadialGradient()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Related</div>
+    
+      
+        <a href="#beginradialgradient">beginRadialGradient</a>
 
       
     
@@ -897,7 +1243,7 @@ print(arr);</pre>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/c7f866f031f2b20a2667585e2c40fdf71a8ff597/src/p5.utils.js#L372-L389'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L467-L484'>
       <span>src/p5.utils.js</span>
       </a>
     
@@ -907,7 +1253,7 @@ print(arr);</pre>
   <p>Default Context 2D Gradient fill style. Must be used with <a href="#endlineargradient">endLinearGradient</a> method. See examples for how to use it.</p>
 <p>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createLinearGradient">https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createLinearGradient</a></p>
 
-    <div class='pre p1 fill-light mt0'>beginLinearGradient(_colorsArr: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;p5.Color> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>>), _startX: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, _startY: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, _endX: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, _endY: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, _colorsRatio: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>>)</div>
+    <div class='pre p1 fill-light mt0'>beginLinearGradient(_colorsArr: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;p5.Color> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>), _startX: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _startY: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _endX: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _endY: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _colorsRatio: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</div>
   
   
 
@@ -924,7 +1270,7 @@ print(arr);</pre>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>_colorsArr</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;p5.Color> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>>))</code>
+            <span class='code bold'>_colorsArr</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;p5.Color> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>))</code>
 	    List of colors in the gradient fill.
 
           </div>
@@ -933,7 +1279,7 @@ print(arr);</pre>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>_startX</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+            <span class='code bold'>_startX</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
 	    The x-axis coordinate of the start point.
 
           </div>
@@ -942,7 +1288,7 @@ print(arr);</pre>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>_startY</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+            <span class='code bold'>_startY</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
 	    The y-axis coordinate of the start point.
 
           </div>
@@ -951,7 +1297,7 @@ print(arr);</pre>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>_endX</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+            <span class='code bold'>_endX</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
 	    The x-axis coordinate of the end point.
 
           </div>
@@ -960,7 +1306,7 @@ print(arr);</pre>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>_endY</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+            <span class='code bold'>_endY</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
 	    The y-axis coordinate of the end point.
 
           </div>
@@ -969,7 +1315,8 @@ print(arr);</pre>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>_colorsRatio</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>>)</code>
+            <span class='code bold'>_colorsRatio</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>
+            = <code>[]</code>)</code>
 	    The distribution weight of colors. The values must be between 0 - 1. Conventionally, if you include three colors, set the first one to 0, the last one to 1, and the middle one depends on your choice(0-1). The method automatically assign start and stop values, if you do not specify any value they will be generated randomly.
 
           </div>
@@ -1050,7 +1397,7 @@ print(arr);</pre>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/c7f866f031f2b20a2667585e2c40fdf71a8ff597/src/p5.utils.js#L397-L399'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L492-L494'>
       <span>src/p5.utils.js</span>
       </a>
     
@@ -1114,7 +1461,7 @@ print(arr);</pre>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/c7f866f031f2b20a2667585e2c40fdf71a8ff597/src/p5.utils.js#L413-L432'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L508-L527'>
       <span>src/p5.utils.js</span>
       </a>
     
@@ -1123,7 +1470,7 @@ print(arr);</pre>
 
   <p>Set the style and display the text in a single method. See <a href="#gettimestamp">getTimeStamp</a> example on how to use the function.</p>
 
-    <div class='pre p1 fill-light mt0'>text(_txt: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>), _x: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, _y: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, _size: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, _font: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, _alignH: Constant, _alighV: Constant)</div>
+    <div class='pre p1 fill-light mt0'>text(_txt: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>), _x: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _y: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _size: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _font: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, _alignH: Constant, _alighV: Constant)</div>
   
   
 
@@ -1140,7 +1487,7 @@ print(arr);</pre>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>_txt</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>))</code>
+            <span class='code bold'>_txt</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>))</code>
 	    Text or number to be displayed
 
           </div>
@@ -1149,7 +1496,7 @@ print(arr);</pre>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>_x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+            <span class='code bold'>_x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
 	    X position of the text
 
           </div>
@@ -1158,7 +1505,7 @@ print(arr);</pre>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>_y</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+            <span class='code bold'>_y</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
 	    Y position of the text
 
           </div>
@@ -1167,7 +1514,7 @@ print(arr);</pre>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>_size</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>
+            <span class='code bold'>_size</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
             = <code>12</code>)</code>
 	    Font size
 
@@ -1177,7 +1524,7 @@ print(arr);</pre>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>_font</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+            <span class='code bold'>_font</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
             = <code>&quot;sans-serif&quot;</code>)</code>
 	    Custom Font face. See example 
 <a href="#gettimestamp">getTimeStamp</a>
@@ -1241,7 +1588,7 @@ print(arr);</pre>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/c7f866f031f2b20a2667585e2c40fdf71a8ff597/src/p5.utils.js#L445-L454'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L540-L549'>
       <span>src/p5.utils.js</span>
       </a>
     
@@ -1250,7 +1597,7 @@ print(arr);</pre>
 
   <p>returns true every nth second in draw function</p>
 
-    <div class='pre p1 fill-light mt0'>notify(_on_every_nth_second: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+    <div class='pre p1 fill-light mt0'>notify(_on_every_nth_second: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
   
   
 
@@ -1267,7 +1614,7 @@ print(arr);</pre>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>_on_every_nth_second</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+            <span class='code bold'>_on_every_nth_second</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
 	    Set notifier frequency. The input value needs to be in seconds.
 
           </div>
@@ -1328,12 +1675,186 @@ print(arr);</pre>
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='setrulerstyle'>
+      setRulerStyle
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L596-L606'>
+      <span>src/p5.utils.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Customize the pixel ruler style. Set the colors and font options. Also customizes the <a href="#debug">debug</a> background and text colors.</p>
+
+    <div class='pre p1 fill-light mt0'>setRulerStyle(_p5rulerBgColor: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, _p5rulerTxtColor: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, _p5rulersize: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _p5rulerInfoColor: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, _p5rulerInfoBgColor: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, _p5rulerTickColor: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, _p5rulerFont: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_p5rulerBgColor</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+            = <code>&quot;rgba(30,30,30,1)&quot;</code>)</code>
+	    Pixel Ruler Background color.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_p5rulerTxtColor</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+            = <code>&quot;rgba(150,150,150,1)&quot;</code>)</code>
+	    Text Color on the Pixel Puler.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_p5rulersize</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
+            = <code>20</code>)</code>
+	    Ruler size for top and left sides.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_p5rulerInfoColor</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+            = <code>&quot;rgba(30,30,30,1)&quot;</code>)</code>
+	    Info Text Color following the mouse cursor.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_p5rulerInfoBgColor</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+            = <code>&quot;rgba(255,255,255,0.5)&quot;</code>)</code>
+	    Info Text Background color.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_p5rulerTickColor</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+            = <code>&quot;rgba(255,0,0,1)&quot;</code>)</code>
+	    Ticker Color that projects the mouse cursor on top and left ruler bar.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_p5rulerFont</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+            = <code>&quot;11px monospace&quot;</code>)</code>
+	    Overall font size and font-family of the Pixel Ruler.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Related</div>
+    
+      
+        <a href="#enableruler">enableRuler</a>
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// Define global variable and initialize p5.Utils lib</span>
+<span class="hljs-keyword">var</span> utils = <span class="hljs-keyword">new</span> p5.Utils();
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
+     createCanvas(<span class="hljs-number">400</span>,<span class="hljs-number">400</span>);
+     
+     <span class="hljs-comment">// Set styling before the enabling the ruler</span>
+     utils.setRulerStyle(
+         <span class="hljs-string">&quot;rgba(200,200,200,1)&quot;</span>, <span class="hljs-comment">// Ruler Bg Color</span>
+         <span class="hljs-string">&quot;rgba(30,30,30,1)&quot;</span>,    <span class="hljs-comment">// Ruler Text Color</span>
+         <span class="hljs-number">20</span>,                    <span class="hljs-comment">// Ruler Size</span>
+         <span class="hljs-string">&quot;rgba(200,200,200,1)&quot;</span>, <span class="hljs-comment">// Info Text Color following the mouse cursor</span>
+         <span class="hljs-string">&quot;rgba(5,5,5,0.7)&quot;</span>,     <span class="hljs-comment">// Info Text Background Color</span>
+         <span class="hljs-string">&quot;rgba(0,255,0,1)&quot;</span>,    <span class="hljs-comment">// Ticker Color that projects the mouse cursor on top and left ruler bar</span>
+         <span class="hljs-string">&quot;10px monospace&quot;</span>      <span class="hljs-comment">// Overall font size and font family</span>
+     );    
+     
+     <span class="hljs-comment">// No need to run in draw function</span>
+     <span class="hljs-comment">// The function creates its canvases in a different drawing context</span>
+     utils.enableRuler();
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">draw</span>(<span class="hljs-params"></span>) </span>{
+     background(<span class="hljs-number">220</span>);
+     rect(width*<span class="hljs-number">0.5</span>, height*<span class="hljs-number">0.5</span>,<span class="hljs-number">500</span>, <span class="hljs-number">500</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">keyPressed</span>(<span class="hljs-params"></span>) </span>{
+     <span class="hljs-keyword">if</span>(key == <span class="hljs-string">&#x27;h&#x27;</span>) {
+         utils.disableRuler();
+     }
+}</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='disableruler'>
       disableRuler
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/c7f866f031f2b20a2667585e2c40fdf71a8ff597/src/p5.utils.js#L461-L476'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L613-L628'>
       <span>src/p5.utils.js</span>
       </a>
     
@@ -1397,7 +1918,7 @@ print(arr);</pre>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/c7f866f031f2b20a2667585e2c40fdf71a8ff597/src/p5.utils.js#L505-L617'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L657-L776'>
       <span>src/p5.utils.js</span>
       </a>
     

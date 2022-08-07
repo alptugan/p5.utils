@@ -13,7 +13,7 @@
 
 [7_GradientFill](https://github.com/alptugan/p5.utils/tree/main/examples/7_GradientFill) | [8_RadialGradientFill](#) | [9_Countdown](#)
 ------------- | ------------- | -------------
-<a href="https://github.com/alptugan/p5.utils/tree/main/examples/7_GradientFill"><img src="examples/7_GradientFill/ss-linearGradientFill.png" width="100%"></a>  | <a href="#"><img src="examples/empty.png" width="100%"></a> | <a href="#"><img src="examples/empty.png" width="100%"></a>
+<a href="https://github.com/alptugan/p5.utils/tree/main/examples/7_GradientFill"><img src="examples/7_GradientFill/ss-linearGradientFill.png" width="100%"></a>  | <a href="#"><img src="examples/8_Radial_GradientFill/ss-radialGradient.png" width="100%"></a> | <a href="#"><img src="examples/empty.png" width="100%"></a>
 
 ## How to use p5.Utils library?
 ---
@@ -60,22 +60,32 @@ p5.Utils extends p5 with several functionalities including cheaper drawingcontex
 <dt><a href="#debug">debug(_itemName)</a></dt>
 <dd><p>Create Debug Div cause p5 font is expensive.</p>
 </dd>
-<dt><a href="#getTimeStamp">getTimeStamp([_date])</a> ⇒ <code>String</code></dt>
+<dt><a href="#getTimeStamp">getTimeStamp([_date])</a> ⇒ <code>string</code></dt>
 <dd><p>Timestamp function useful for file naming to avoid overwrite issues.</p>
+</dd>
+<dt><a href="#getRandomInt">getRandomInt(_min, _max)</a> ⇒ <code>number</code></dt>
+<dd><p>Generates and returns a random integer between min and max number</p>
 </dd>
 <dt><a href="#saveCanvas">saveCanvas([_prefix], [_suffix])</a></dt>
 <dd><p>Utilizes p5JS saveCanvas function to make it easier file saving process by combining the function with getTimeStamp() method.</p>
 </dd>
-<dt><a href="#arrayResize">arrayResize(_arr, _newSize, [_defaultValue])</a> ⇒ <code>Array.&lt;Number&gt;</code> | <code>Array.&lt;String&gt;</code> | <code>Array.&lt;Boolean&gt;</code></dt>
+<dt><a href="#arrayResize">arrayResize(_arr, _newSize, [_defaultValue])</a> ⇒ <code>Array.&lt;number&gt;</code> | <code>Array.&lt;string&gt;</code> | <code>Array.&lt;boolean&gt;</code></dt>
 <dd><p>Resizes an array and returns it. Similar to vectors resize in C++.</p>
 </dd>
 <dt><a href="#beginShadow">beginShadow(_color, _shadowBlur, _shadowOffsetX, _shadowOffsetY)</a></dt>
-<dd><p>Creates shadow effect usign drawing context. Must be used with <a href="#endShadow">endShadow</a> method. See examples for how to use it.</p>
+<dd><p>Creates shadow effect using drawing context. Must be used with <a href="#endShadow">endShadow</a> method. See examples for how to use it.</p>
 </dd>
 <dt><a href="#endShadow">endShadow()</a></dt>
-<dd><p>Stops shadow effect for the following graphics on the canvas. For example usage <a href="#beginShadow">beginShadow</a> page.</p>
+<dd><p>Clears shadow effect for the following graphics on the canvas. For example usage check <a href="#beginShadow">beginShadow</a>.</p>
 </dd>
-<dt><a href="#beginLinearGradient">beginLinearGradient(_colorsArr, _startX, _startY, _endX, _endY, _colorsRatio)</a></dt>
+<dt><a href="#beginRadialGradient">beginRadialGradient(_colorsArr, _startX, _startY, _rad, [_endX], [_endY], [_rOuter], [_ratio])</a></dt>
+<dd><p>Default Context 2D Radial Gradient fill style. Must be used with <a href="#endRadialGradient">endRadialGradient</a> method. See examples for how to use it.
+Reference: <a><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createRadialGradient">https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createRadialGradient</a></a></p>
+</dd>
+<dt><a href="#endRadialGradient">endRadialGradient()</a></dt>
+<dd><p>Stops radial gradient fill for the following graphics on the canvas. For example usage check <a href="#beginRadialGradient">beginRadialGradient</a> page.</p>
+</dd>
+<dt><a href="#beginLinearGradient">beginLinearGradient(_colorsArr, _startX, _startY, _endX, _endY, [_colorsRatio])</a></dt>
 <dd><p>Default Context 2D Gradient fill style. Must be used with <a href="#endLinearGradient">endLinearGradient</a> method. See examples for how to use it.</p>
 <p>Reference: <a><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createLinearGradient">https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createLinearGradient</a></a></p>
 </dd>
@@ -87,6 +97,9 @@ p5.Utils extends p5 with several functionalities including cheaper drawingcontex
 </dd>
 <dt><a href="#notify">notify(_on_every_nth_second)</a> ⇒ <code>boolean</code></dt>
 <dd><p>returns true every nth second in draw function</p>
+</dd>
+<dt><a href="#setRulerStyle">setRulerStyle([_p5rulerBgColor], [_p5rulerTxtColor], [_p5rulersize], [_p5rulerInfoColor], [_p5rulerInfoBgColor], [_p5rulerTickColor], [_p5rulerFont])</a></dt>
+<dd><p>Customize the pixel ruler style. Set the colors and font options. Also customizes the <a href="#debug">debug</a> background and text colors.</p>
 </dd>
 <dt><a href="#disableRuler">disableRuler()</a></dt>
 <dd><p>Removes the ruler graphics from the canvas.</p>
@@ -120,11 +133,11 @@ utils.debug(
 ```
 <a name="getTimeStamp"></a>
 
-## getTimeStamp([_date]) ⇒ <code>String</code>
+## getTimeStamp([_date]) ⇒ <code>string</code>
 Timestamp function useful for file naming to avoid overwrite issues.
 
 **Kind**: global function  
-**Returns**: <code>String</code> - Current date + time depending on _date argument value. 
+**Returns**: <code>string</code> - Current date + time depending on _date argument value. 
 
 When _date = true;
 
@@ -184,6 +197,19 @@ function draw() {
 
 }
 ```
+<a name="getRandomInt"></a>
+
+## getRandomInt(_min, _max) ⇒ <code>number</code>
+Generates and returns a random integer between min and max number
+
+**Kind**: global function  
+**Returns**: <code>number</code> - Result will be integer  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| _min | <code>number</code> | Floor value of the random number |
+| _max | <code>number</code> | Ceil value of the random number |
+
 <a name="saveCanvas"></a>
 
 ## saveCanvas([_prefix], [_suffix])
@@ -193,8 +219,8 @@ Utilizes p5JS saveCanvas function to make it easier file saving process by combi
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| [_prefix] | <code>String</code> \| <code>Number</code> | <code>&quot;&quot;</code> | Any relevant text in the begining of the file name. If it is leaved empty, the file name will be Year-Month-Day_Hour-Minute-Second.PNG |
-| [_suffix] | <code>String</code> | <code>&quot;png&quot;</code> | The file extension JPG, PNG, ... |
+| [_prefix] | <code>string</code> \| <code>number</code> | <code>&quot;\&quot;\&quot;&quot;</code> | Any relevant text in the begining of the file name. If it is leaved empty, the file name will be Year-Month-Day_Hour-Minute-Second.PNG |
+| [_suffix] | <code>string</code> | <code>&quot;\&quot;png\&quot;&quot;</code> | The file extension JPG, PNG, ... |
 
 **Example**  
 ```js
@@ -270,17 +296,17 @@ function draw() {
 ```
 <a name="arrayResize"></a>
 
-## arrayResize(_arr, _newSize, [_defaultValue]) ⇒ <code>Array.&lt;Number&gt;</code> \| <code>Array.&lt;String&gt;</code> \| <code>Array.&lt;Boolean&gt;</code>
+## arrayResize(_arr, _newSize, [_defaultValue]) ⇒ <code>Array.&lt;number&gt;</code> \| <code>Array.&lt;string&gt;</code> \| <code>Array.&lt;boolean&gt;</code>
 Resizes an array and returns it. Similar to vectors resize in C++.
 
 **Kind**: global function  
-**Returns**: <code>Array.&lt;Number&gt;</code> \| <code>Array.&lt;String&gt;</code> \| <code>Array.&lt;Boolean&gt;</code> - The new array  
+**Returns**: <code>Array.&lt;number&gt;</code> \| <code>Array.&lt;string&gt;</code> \| <code>Array.&lt;boolean&gt;</code> - The new array  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| _arr | <code>Array.&lt;Number&gt;</code> \| <code>Array.&lt;String&gt;</code> \| <code>Array.&lt;Boolean&gt;</code> |  | The array to be resized |
-| _newSize | <code>Number</code> |  | The new size of the array |
-| [_defaultValue] | <code>Number</code> \| <code>String</code> \| <code>Boolean</code> | <code>-1</code> | Default value for all members of the new array. |
+| _arr | <code>Array.&lt;number&gt;</code> \| <code>Array.&lt;string&gt;</code> \| <code>Array.&lt;boolean&gt;</code> |  | The array to be resized |
+| _newSize | <code>number</code> |  | The new size of the array |
+| [_defaultValue] | <code>number</code> \| <code>string</code> \| <code>boolean</code> | <code>-1</code> | Default value for all members of the new array. |
 
 **Example**  
 ```js
@@ -297,16 +323,16 @@ print(arr);
 <a name="beginShadow"></a>
 
 ## beginShadow(_color, _shadowBlur, _shadowOffsetX, _shadowOffsetY)
-Creates shadow effect usign drawing context. Must be used with [endShadow](#endShadow) method. See examples for how to use it.
+Creates shadow effect using drawing context. Must be used with [endShadow](#endShadow) method. See examples for how to use it.
 
 **Kind**: global function  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| _color | <code>p5.Color</code> \| <code>String</code> | The color can be declared as ```color(r,g,b,a)``` or in hexadecimal format ```"#FFCC00"``` as string argument. |
-| _shadowBlur | <code>Number</code> | Blur amount of the shadow. |
-| _shadowOffsetX | <code>Number</code> | Shadow offset for x axis. |
-| _shadowOffsetY | <code>Number</code> | Shadow offset for y axis. |
+| _color | <code>p5.Color</code> \| <code>string</code> | The color can be declared as ```color(r,g,b,a)``` or in hexadecimal format ```"#FFCC00"``` as string argument. |
+| _shadowBlur | <code>number</code> | Blur amount of the shadow. |
+| _shadowOffsetX | <code>number</code> | Shadow offset for x axis. |
+| _shadowOffsetY | <code>number</code> | Shadow offset for y axis. |
 
 **Example**  
 ```js
@@ -325,27 +351,76 @@ function draw() {
 <a name="endShadow"></a>
 
 ## endShadow()
-Stops shadow effect for the following graphics on the canvas. For example usage [beginShadow](#beginShadow) page.
+Clears shadow effect for the following graphics on the canvas. For example usage check [beginShadow](#beginShadow).
 
 **Kind**: global function  
-**See**: For example usage [beginShadow](#beginShadow) page.  
+**See**: [beginShadow](#beginShadow)  
+<a name="beginRadialGradient"></a>
+
+## beginRadialGradient(_colorsArr, _startX, _startY, _rad, [_endX], [_endY], [_rOuter], [_ratio])
+Default Context 2D Radial Gradient fill style. Must be used with [endRadialGradient](#endRadialGradient) method. See examples for how to use it.
+Reference: <a>https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createRadialGradient</a>
+
+**Kind**: global function  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| _colorsArr | <code>Array.&lt;p5.Color&gt;</code> \| <code>Array.&lt;string&gt;</code> |  | List of colors in the gradient fill. |
+| _startX | <code>number</code> |  | The x-axis coordinate of the start point. |
+| _startY | <code>number</code> |  | The y-axis coordinate of the start point. |
+| _rad | <code>number</code> |  | Radius of the first radiant gradient space. |
+| [_endX] | <code>number</code> | <code>-1</code> | The x-axis coordinate of the end point. If you leave it as -1, the function set _endX=_startX. |
+| [_endY] | <code>number</code> | <code>-1</code> | The y-axis coordinate of the end point. If you leave it as -1, the function set _endY=_startY |
+| [_rOuter] | <code>number</code> | <code>-1</code> | Radius of the outer radiant gradient space. If you leave it as -1, the function set _rOuter=_rad and _rad=_rad*0.1 |
+| [_ratio] | <code>number</code> | <code>-1</code> | The distribution weight of colors. The values must be between 0 - 1. Conventionally, if you include three colors, set the first one to 0, the last one to 1, and the middle one depends on your choice(0-1). The method automatically assign start and stop values, if you do not specify any value they will be generated randomly. |
+
+**Example**  
+```js
+// Declare global utils var
+var utils = new p5.Utils();
+function setup() {
+     createCanvas(innerWidth, innerHeight);
+}
+
+function draw() {
+ background(200);
+ utils.beginRadialGradient(
+     ["#ffcc00","#ccff00","#ff0000"],
+     width*0.5,
+     height*0.5,
+     100,
+     width*0.5 + 100,
+     height*0.5 + 100,
+     400);
+ circle(width*0.5, height*0.5,400);
+ utils.endRadialGradient();        
+
+}
+```
+<a name="endRadialGradient"></a>
+
+## endRadialGradient()
+Stops radial gradient fill for the following graphics on the canvas. For example usage check [beginRadialGradient](#beginRadialGradient) page.
+
+**Kind**: global function  
+**See**: [beginRadialGradient](#beginRadialGradient)  
 <a name="beginLinearGradient"></a>
 
-## beginLinearGradient(_colorsArr, _startX, _startY, _endX, _endY, _colorsRatio)
+## beginLinearGradient(_colorsArr, _startX, _startY, _endX, _endY, [_colorsRatio])
 Default Context 2D Gradient fill style. Must be used with [endLinearGradient](#endLinearGradient) method. See examples for how to use it.
 
 Reference: <a>https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createLinearGradient</a>
 
 **Kind**: global function  
 
-| Param | Type | Description |
-| --- | --- | --- |
-| _colorsArr | <code>Array.&lt;p5.Color&gt;</code> \| <code>Array.&lt;Number&gt;</code> \| <code>Array.&lt;String&gt;</code> | List of colors in the gradient fill. |
-| _startX | <code>Number</code> | The x-axis coordinate of the start point. |
-| _startY | <code>Number</code> | The y-axis coordinate of the start point. |
-| _endX | <code>Number</code> | The x-axis coordinate of the end point. |
-| _endY | <code>Number</code> | The y-axis coordinate of the end point. |
-| _colorsRatio | <code>Array.&lt;Number&gt;</code> | The distribution weight of colors. The values must be between 0 - 1. Conventionally, if you include three colors, set the first one to 0, the last one to 1, and the middle one depends on your choice(0-1). The method automatically assign start and stop values, if you do not specify any value they will be generated randomly. |
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| _colorsArr | <code>Array.&lt;p5.Color&gt;</code> \| <code>Array.&lt;string&gt;</code> |  | List of colors in the gradient fill. |
+| _startX | <code>number</code> |  | The x-axis coordinate of the start point. |
+| _startY | <code>number</code> |  | The y-axis coordinate of the start point. |
+| _endX | <code>number</code> |  | The x-axis coordinate of the end point. |
+| _endY | <code>number</code> |  | The y-axis coordinate of the end point. |
+| [_colorsRatio] | <code>Array.&lt;number&gt;</code> | <code>[]</code> | The distribution weight of colors. The values must be between 0 - 1. Conventionally, if you include three colors, set the first one to 0, the last one to 1, and the middle one depends on your choice(0-1). The method automatically assign start and stop values, if you do not specify any value they will be generated randomly. |
 
 **Example**  
 ```js
@@ -400,11 +475,11 @@ Set the style and display the text in a single method. See [getTimeStamp](#getTi
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| _txt | <code>String</code> \| <code>Number</code> |  | Text or number to be displayed |
-| _x | <code>Number</code> |  | X position of the text |
-| _y | <code>Number</code> |  | Y position of the text |
-| [_size] | <code>Number</code> | <code>12</code> | Font size |
-| [_font] | <code>String</code> | <code>&quot;sans-serif&quot;</code> | Custom Font face. See example [getTimeStamp](#getTimeStamp) |
+| _txt | <code>string</code> \| <code>number</code> |  | Text or number to be displayed |
+| _x | <code>number</code> |  | X position of the text |
+| _y | <code>number</code> |  | Y position of the text |
+| [_size] | <code>number</code> | <code>12</code> | Font size |
+| [_font] | <code>string</code> | <code>&quot;\&quot;sans-serif\&quot;&quot;</code> | Custom Font face. See example [getTimeStamp](#getTimeStamp) |
 | [_alignH] | <code>Constant</code> | <code>LEFT</code> | Text horizontal align |
 | [_alighV] | <code>Constant</code> | <code>TOP</code> | Text vertical align |
 
@@ -418,12 +493,65 @@ returns true every nth second in draw function
 
 | Param | Type | Description |
 | --- | --- | --- |
-| _on_every_nth_second | <code>Number</code> | Set notifier frequency. The input value needs to be in seconds. |
+| _on_every_nth_second | <code>number</code> | Set notifier frequency. The input value needs to be in seconds. |
 
 **Example**  
 ```js
 if (utils.notify(10) == true) {
      // do something here.
+}
+```
+<a name="setRulerStyle"></a>
+
+## setRulerStyle([_p5rulerBgColor], [_p5rulerTxtColor], [_p5rulersize], [_p5rulerInfoColor], [_p5rulerInfoBgColor], [_p5rulerTickColor], [_p5rulerFont])
+Customize the pixel ruler style. Set the colors and font options. Also customizes the [debug](#debug) background and text colors.
+
+**Kind**: global function  
+**See**: [enableRuler](#enableRuler)  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| [_p5rulerBgColor] | <code>string</code> | <code>&quot;\&quot;rgba(30,30,30,1)\&quot;&quot;</code> | Pixel Ruler Background color. |
+| [_p5rulerTxtColor] | <code>string</code> | <code>&quot;\&quot;rgba(150,150,150,1)\&quot;&quot;</code> | Text Color on the Pixel Puler. |
+| [_p5rulersize] | <code>number</code> | <code>20</code> | Ruler size for top and left sides. |
+| [_p5rulerInfoColor] | <code>string</code> | <code>&quot;\&quot;rgba(30,30,30,1)\&quot;&quot;</code> | Info Text Color following the mouse cursor. |
+| [_p5rulerInfoBgColor] | <code>string</code> | <code>&quot;\&quot;rgba(255,255,255,0.5)\&quot;&quot;</code> | Info Text Background color. |
+| [_p5rulerTickColor] | <code>string</code> | <code>&quot;\&quot;rgba(255,0,0,1)\&quot;&quot;</code> | Ticker Color that projects the mouse cursor on top and left ruler bar. |
+| [_p5rulerFont] | <code>string</code> | <code>&quot;\&quot;11px monospace\&quot;&quot;</code> | Overall font size and font-family of the Pixel Ruler. |
+
+**Example**  
+```js
+// Define global variable and initialize p5.Utils lib
+var utils = new p5.Utils();
+
+function setup() {
+     createCanvas(400,400);
+     
+     // Set styling before the enabling the ruler
+     utils.setRulerStyle(
+         "rgba(200,200,200,1)", // Ruler Bg Color
+         "rgba(30,30,30,1)",    // Ruler Text Color
+         20,                    // Ruler Size
+         "rgba(200,200,200,1)", // Info Text Color following the mouse cursor
+         "rgba(5,5,5,0.7)",     // Info Text Background Color
+         "rgba(0,255,0,1)",    // Ticker Color that projects the mouse cursor on top and left ruler bar
+         "10px monospace"      // Overall font size and font family
+     );    
+     
+     // No need to run in draw function
+     // The function creates its canvases in a different drawing context
+     utils.enableRuler();
+}
+
+function draw() {
+     background(220);
+     rect(width*0.5, height*0.5,500, 500);
+}
+
+function keyPressed() {
+     if(key == 'h') {
+         utils.disableRuler();
+     }
 }
 ```
 <a name="disableRuler"></a>
