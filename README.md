@@ -1,5 +1,5 @@
 
-## Check [OpenProcessing](https://openprocessing.org/user/68647/?o=7&view=sketches) page for live examples to see them in action. You can add the library to your OP project directly from the UI. 
+## Check [OpenProcessing](https://openprocessing.org/user/68647/?o=17&view=curations) page for live examples to see them in action. You can add the library to your OP project directly from the UI. 
 ---
 
 # p5.utils Library
