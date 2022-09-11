@@ -27,7 +27,7 @@
 3. Hit CMD+s (or File->Save). This will create a copy of required files in your P5JS account. Whenever you need to access ```p5.utils``` you can follow the same steps.
 
 ### Option 2 (If you are using local text editor like VSCode for development)
-1. Download the final minified js version from ["Releases" page](https://github.com/alptugan/p5.utils/releases/download/v0.0.1/p5.utils.min.js).
+1. Download the final minified js version from ["Releases" page](https://github.com/alptugan/p5.utils/releases).
 2. Upload ```p5.utils.min.js``` to your project folder in p5 editor.
 3. Include the ```p5.utils.min.js``` in the ```index.html``` document before p5.js libs as follows;
      ```
