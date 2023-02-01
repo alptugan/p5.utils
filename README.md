@@ -19,14 +19,13 @@
 ------------- | ------------- | -------------
 <a href="https://github.com/alptugan/p5.utils/tree/main/examples/7_GradientFill"><img src="examples/7_GradientFill/ss-linearGradientFill.png" width="100%"></a>  | <a href="https://github.com/alptugan/p5.utils/tree/main/examples/8_Radial_GradientFill"><img src="examples/8_Radial_GradientFill/ss-radialGradient.png" width="100%"></a> | <a href="#"><img src="examples/empty.png" width="100%"></a>
 
-## How to use p5.Utils library?
----
-### Option 1 (Quick Start via P5JS Online Editor)
+# How to use p5.Utils library?
+## Option 1 (Quick Start via P5JS Online Editor)
 1. [Navigate to p5JS examples collection.](https://editor.p5js.org/alptugan/collections/tUYB1Fn4b)
 2. Click on p5.utils.template.
 3. Hit CMD+s (or File->Save). This will create a copy of required files in your P5JS account. Whenever you need to access ```p5.utils``` you can follow the same steps.
 
-### Option 2 (If you are using local text editor like VSCode for development)
+## Option 2 (If you are using local text editor like VSCode for development)
 1. Download the final minified js version from ["Releases" page](https://github.com/alptugan/p5.utils/releases).
 2. Upload ```p5.utils.min.js``` to your project folder in p5 editor.
 3. Include the ```p5.utils.min.js``` in the ```index.html``` document before p5.js libs as follows;
@@ -45,20 +44,15 @@
      ```
      utils.enablerRuler(); 
      ```
-### Option 3 (Import the lib. using CDN service)
+## Option 3 (Import the lib. using CDN service)
 1. Include CDN source to you ```ìndex.html```.
   ```
   <script src="https://cdn.jsdelivr.net/gh/alptugan/p5.utils@latest/src/p5.utils.min.js"></script>
   ```
 2. Repeat the above steps 4 and 5.
 
-## Reference
----
-### p5.Utils library
+# Reference
 p5.Utils extends p5 with several functionalities including cheaper drawingcontext effects, pixel ruler (useful for new commers), array operations, file naming, dom based debug window to avoid rendering text in p5JS.
-
-<a name="functions"></a>
-## Functions
 
 <dl>
 <dt><a href="#debug">debug(_itemName)</a></dt>
@@ -70,11 +64,17 @@ p5.Utils extends p5 with several functionalities including cheaper drawingcontex
 <dt><a href="#getRandomInt">getRandomInt(_min, _max)</a> ⇒ <code>number</code></dt>
 <dd><p>Generates and returns a random integer between min and max number</p>
 </dd>
-<dt><a href="#saveCanvas">saveCanvas([_prefix], [_suffix])</a></dt>
+<dt><a href="#saveCanvas">saveCanvas([_prefix&#x3D;], [_suffix])</a></dt>
 <dd><p>Utilizes p5JS saveCanvas function to make it easier file saving process by combining the function with getTimeStamp() method.</p>
 </dd>
 <dt><a href="#arrayResize">arrayResize(_arr, _newSize, [_defaultValue])</a> ⇒ <code>Array.&lt;number&gt;</code> | <code>Array.&lt;string&gt;</code> | <code>Array.&lt;boolean&gt;</code></dt>
 <dd><p>Resizes an array and returns it. Similar to vectors resize in C++.</p>
+</dd>
+<dt><a href="#createGrid">createGrid(_row, _col, _totalW, _totalH, [_margin], [_type], [_alignX], [_alignY])</a> ⇒ <code>Object.&lt;number&gt;</code></dt>
+<dd><p>Returns an array of object that holds position and size information for each grid element. Fills the grid row by row.</p>
+</dd>
+<dt><a href="#debugGrid">debugGrid([_fz], [_colorTxt], [_colorBorder])</a></dt>
+<dd><p>Displays the grid tiles of <a href="#createGrid">createGrid</a> and index of each gridItem.</p>
 </dd>
 <dt><a href="#beginShadow">beginShadow(_color, _shadowBlur, _shadowOffsetX, _shadowOffsetY)</a></dt>
 <dd><p>Creates shadow effect using drawing context. Must be used with <a href="#endShadow">endShadow</a> method. See examples for how to use it.</p>
@@ -102,7 +102,7 @@ Reference: <a><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRe
 <dt><a href="#notify">notify(_on_every_nth_second)</a> ⇒ <code>boolean</code></dt>
 <dd><p>returns true every nth second in draw function</p>
 </dd>
-<dt><a href="#setRulerStyle">setRulerStyle([_p5rulerBgColor], [_p5rulerTxtColor], [_p5rulersize], [_p5rulerInfoColor], [_p5rulerInfoBgColor], [_p5rulerTickColor], [_p5rulerFont])</a></dt>
+<dt><a href="#setRulerStyle">setRulerStyle([_p5rulerBgColor], [_p5rulerTxtColor], [_p5rulersize], [_p5rulerInfoColor], [_p5rulerInfoBgColor], [_p5rulerTickColor], [_p5rulerFont], [_p5rulerInfoEnable])</a></dt>
 <dd><p>Customize the pixel ruler style. Set the colors and font options. Also customizes the <a href="#debug">debug</a> background and text colors.</p>
 </dd>
 <dt><a href="#disableRuler">disableRuler()</a></dt>
@@ -141,7 +141,7 @@ utils.debug(
 Timestamp function useful for file naming to avoid overwrite issues.
 
 **Kind**: global function  
-**Returns**: <code>string</code> - Current date + time depending on _date argument value. 
+**Returns**: <code>string</code> - Current date + time depending on _date argument value.
 
 When _date = true;
 
@@ -177,7 +177,7 @@ function draw() {
   var currentTime = utils.getTimeStamp();
   //print(currentTime);
 
-  // write it to canvas using utils's text function 
+  // write it to canvas using utils's text function
   fill(255, 100, 20);
   utils.text(
     currentTime,        // string to display
@@ -189,7 +189,7 @@ function draw() {
   // get current time stamp without date
   var currentTime2 = utils.getTimeStamp(false);
   fill(90, 90, 90);
-  // write it to canvas using utils's text function 
+  // write it to canvas using utils's text function
   utils.text(
     currentTime2,   // string to display
     width * 0.5,   // x position
@@ -216,15 +216,15 @@ Generates and returns a random integer between min and max number
 
 <a name="saveCanvas"></a>
 
-## saveCanvas([_prefix], [_suffix])
+## saveCanvas([_prefix&#x3D;], [_suffix])
 Utilizes p5JS saveCanvas function to make it easier file saving process by combining the function with getTimeStamp() method.
 
 **Kind**: global function  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| [_prefix] | <code>string</code> \| <code>number</code> | <code>&quot;\&quot;\&quot;&quot;</code> | Any relevant text in the begining of the file name. If it is leaved empty, the file name will be Year-Month-Day_Hour-Minute-Second.PNG |
-| [_suffix] | <code>string</code> | <code>&quot;\&quot;png\&quot;&quot;</code> | The file extension JPG, PNG, ... |
+| [_prefix=] | <code>string</code> \| <code>number</code> |  | Any relevant text in the begining of the file name. If it is leaved empty, the file name will be Year-Month-Day_Hour-Minute-Second.PNG |
+| [_suffix] | <code>string</code> | <code>&quot;png&quot;</code> | The file extension JPG, PNG, ... |
 
 **Example**  
 ```js
@@ -324,6 +324,42 @@ print(arr);
 arr = utils.arrayResize(arr, 22, random(0,1));
 print(arr);
 ```
+<a name="createGrid"></a>
+
+## createGrid(_row, _col, _totalW, _totalH, [_margin], [_type], [_alignX], [_alignY]) ⇒ <code>Object.&lt;number&gt;</code>
+Returns an array of object that holds position and size information for each grid element. Fills the grid row by row.
+
+**Kind**: global function  
+**Returns**: <code>Object.&lt;number&gt;</code> - The returned object includes {x,y,w,h}  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| _row | <code>number</code> |  | Number of rows |
+| _col | <code>number</code> |  | Number of columns |
+| _totalW | <code>number</code> |  | The width of total grid space |
+| _totalH | <code>number</code> |  | The height of total grid space |
+| [_margin] | <code>number</code> | <code>0</code> | Gap between each grid element |
+| [_type] | <code>const</code> | <code>GRID.SQUARE</code> | The w/h ratio of the each grid. If you want to create rectangular grids you can use ```GRID.RECT``` |
+| [_alignX] | <code>boolean</code> | <code>false</code> | Alignment on the x-axis according to the width of the canvas |
+| [_alignY] | <code>boolean</code> | <code>false</code> | Alignment on the y-axis according to the height of the canvas |
+
+**Example**  
+```js
+// Coming soon... to do
+```
+<a name="debugGrid"></a>
+
+## debugGrid([_fz], [_colorTxt], [_colorBorder])
+Displays the grid tiles of [createGrid](#createGrid) and index of each gridItem.
+
+**Kind**: global function  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| [_fz] | <code>Number</code> | <code>10</code> | Id font-size. |
+| [_colorTxt] | <code>p5.Color</code> | <code>color(0)</code> | Id Text Color. |
+| [_colorBorder] | <code>p5.Color</code> | <code>color(0,200)</code> | Grid Color. |
+
 <a name="beginShadow"></a>
 
 ## beginShadow(_color, _shadowBlur, _shadowOffsetX, _shadowOffsetY)
@@ -397,7 +433,7 @@ function draw() {
      height*0.5 + 100,
      400);
  circle(width*0.5, height*0.5,400);
- utils.endRadialGradient();        
+ utils.endRadialGradient();
 
 }
 ```
@@ -445,7 +481,7 @@ function draw() {
   // Begin gradient fill
   utils.beginLinearGradient(
     ["#FFCC00", color(34, 116, 165), color(126, 161, 114)],//Colors
-    width * 0.5 - 100,    // gradient begin point x     
+    width * 0.5 - 100,    // gradient begin point x
     height * 0.5 - 100,   // gradient begin point y
     width * 0.5 + 100,    // gradient end point x
     height * 0.5 + 100,   // gradient end point y
@@ -483,7 +519,7 @@ Set the style and display the text in a single method. See [getTimeStamp](#getTi
 | _x | <code>number</code> |  | X position of the text |
 | _y | <code>number</code> |  | Y position of the text |
 | [_size] | <code>number</code> | <code>12</code> | Font size |
-| [_font] | <code>string</code> | <code>&quot;\&quot;sans-serif\&quot;&quot;</code> | Custom Font face. See example [getTimeStamp](#getTimeStamp) |
+| [_font] | <code>string</code> | <code>&quot;sans-serif&quot;</code> | Custom Font face. See example [getTimeStamp](#getTimeStamp) |
 | [_alignH] | <code>Constant</code> | <code>LEFT</code> | Text horizontal align |
 | [_alighV] | <code>Constant</code> | <code>TOP</code> | Text vertical align |
 
@@ -507,7 +543,7 @@ if (utils.notify(10) == true) {
 ```
 <a name="setRulerStyle"></a>
 
-## setRulerStyle([_p5rulerBgColor], [_p5rulerTxtColor], [_p5rulersize], [_p5rulerInfoColor], [_p5rulerInfoBgColor], [_p5rulerTickColor], [_p5rulerFont])
+## setRulerStyle([_p5rulerBgColor], [_p5rulerTxtColor], [_p5rulersize], [_p5rulerInfoColor], [_p5rulerInfoBgColor], [_p5rulerTickColor], [_p5rulerFont], [_p5rulerInfoEnable])
 Customize the pixel ruler style. Set the colors and font options. Also customizes the [debug](#debug) background and text colors.
 
 **Kind**: global function  
@@ -515,13 +551,14 @@ Customize the pixel ruler style. Set the colors and font options. Also customize
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| [_p5rulerBgColor] | <code>string</code> | <code>&quot;\&quot;rgba(30,30,30,1)\&quot;&quot;</code> | Pixel Ruler Background color. |
-| [_p5rulerTxtColor] | <code>string</code> | <code>&quot;\&quot;rgba(150,150,150,1)\&quot;&quot;</code> | Text Color on the Pixel Puler. |
+| [_p5rulerBgColor] | <code>string</code> | <code>&quot;rgba(30,30,30,1)&quot;</code> | Pixel Ruler Background color. |
+| [_p5rulerTxtColor] | <code>string</code> | <code>&quot;rgba(150,150,150,1)&quot;</code> | Text Color on the Pixel Puler. |
 | [_p5rulersize] | <code>number</code> | <code>20</code> | Ruler size for top and left sides. |
-| [_p5rulerInfoColor] | <code>string</code> | <code>&quot;\&quot;rgba(30,30,30,1)\&quot;&quot;</code> | Info Text Color following the mouse cursor. |
-| [_p5rulerInfoBgColor] | <code>string</code> | <code>&quot;\&quot;rgba(255,255,255,0.5)\&quot;&quot;</code> | Info Text Background color. |
-| [_p5rulerTickColor] | <code>string</code> | <code>&quot;\&quot;rgba(255,0,0,1)\&quot;&quot;</code> | Ticker Color that projects the mouse cursor on top and left ruler bar. |
-| [_p5rulerFont] | <code>string</code> | <code>&quot;\&quot;11px monospace\&quot;&quot;</code> | Overall font size and font-family of the Pixel Ruler. |
+| [_p5rulerInfoColor] | <code>string</code> | <code>&quot;rgba(30,30,30,1)&quot;</code> | Info Text Color following the mouse cursor. |
+| [_p5rulerInfoBgColor] | <code>string</code> | <code>&quot;rgba(255,255,255,0.5)&quot;</code> | Info Text Background color. |
+| [_p5rulerTickColor] | <code>string</code> | <code>&quot;rgba(255,0,0,1)&quot;</code> | Ticker Color that projects the mouse cursor on top and left ruler bar. |
+| [_p5rulerFont] | <code>string</code> | <code>&quot;11px monospace&quot;</code> | Overall font size and font-family of the Pixel Ruler. |
+| [_p5rulerInfoEnable] | <code>boolean</code> | <code>true</code> | Show / hide info text nect to mouse cursor |
 
 **Example**  
 ```js
@@ -530,7 +567,7 @@ var utils = new p5.Utils();
 
 function setup() {
      createCanvas(400,400);
-     
+
      // Set styling before the enabling the ruler
      utils.setRulerStyle(
          "rgba(200,200,200,1)", // Ruler Bg Color
@@ -538,10 +575,11 @@ function setup() {
          20,                    // Ruler Size
          "rgba(200,200,200,1)", // Info Text Color following the mouse cursor
          "rgba(5,5,5,0.7)",     // Info Text Background Color
-         "rgba(0,255,0,1)",    // Ticker Color that projects the mouse cursor on top and left ruler bar
-         "10px monospace"      // Overall font size and font family
-     );    
-     
+         "rgba(0,255,0,1)",     // Ticker Color that projects the mouse cursor on top and left ruler bar
+         "10px monospace",      // Overall font size and font family
+         false                  // Display info card next to cursor. By default it's true
+     );
+
      // No need to run in draw function
      // The function creates its canvases in a different drawing context
      utils.enableRuler();
@@ -579,7 +617,7 @@ var utils = new p5.Utils();
 
 function setup() {
      createCanvas(400,400);
-     
+
      // No need to run in draw function
      // The function creates its canvases in a different drawing context
      utils.enableRuler();

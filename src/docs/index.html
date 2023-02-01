@@ -88,6 +88,26 @@
               
                 
                 <li><a
+                  href='#creategrid'
+                  class="">
+                  createGrid
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#debuggrid'
+                  class="">
+                  debugGrid
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#beginshadow'
                   class="">
                   beginShadow
@@ -216,10 +236,6 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L33-L37'>
-      <span>src/p5.utils.js</span>
-      </a>
-    
   </div>
   
 
@@ -277,10 +293,6 @@
       debug
     </h3>
     
-    
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L54-L85'>
-      <span>src/p5.utils.js</span>
-      </a>
     
   </div>
   
@@ -359,10 +371,6 @@ utils.debug(
       getTimeStamp
     </h3>
     
-    
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L147-L163'>
-      <span>src/p5.utils.js</span>
-      </a>
     
   </div>
   
@@ -448,7 +456,7 @@ utils.debug(
   <span class="hljs-keyword">var</span> currentTime = utils.getTimeStamp();
   <span class="hljs-comment">//print(currentTime);</span>
 
-  <span class="hljs-comment">// write it to canvas using utils&#x27;s text function </span>
+  <span class="hljs-comment">// write it to canvas using utils&#x27;s text function</span>
   fill(<span class="hljs-number">255</span>, <span class="hljs-number">100</span>, <span class="hljs-number">20</span>);
   utils.text(
     currentTime,        <span class="hljs-comment">// string to display</span>
@@ -460,7 +468,7 @@ utils.debug(
   <span class="hljs-comment">// get current time stamp without date</span>
   <span class="hljs-keyword">var</span> currentTime2 = utils.getTimeStamp(<span class="hljs-literal">false</span>);
   fill(<span class="hljs-number">90</span>, <span class="hljs-number">90</span>, <span class="hljs-number">90</span>);
-  <span class="hljs-comment">// write it to canvas using utils&#x27;s text function </span>
+  <span class="hljs-comment">// write it to canvas using utils&#x27;s text function</span>
   utils.text(
     currentTime2,   <span class="hljs-comment">// string to display</span>
     width * <span class="hljs-number">0.5</span>,   <span class="hljs-comment">// x position</span>
@@ -495,10 +503,6 @@ utils.debug(
       getRandomInt
     </h3>
     
-    
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L173-L178'>
-      <span>src/p5.utils.js</span>
-      </a>
     
   </div>
   
@@ -581,16 +585,12 @@ utils.debug(
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L258-L265'>
-      <span>src/p5.utils.js</span>
-      </a>
-    
   </div>
   
 
   <p>Utilizes p5JS saveCanvas function to make it easier file saving process by combining the function with getTimeStamp() method.</p>
 
-    <div class='pre p1 fill-light mt0'>saveCanvas(_prefix: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>), _suffix: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+    <div class='pre p1 fill-light mt0'>saveCanvas(_prefix: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)?, _suffix: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
   
   
 
@@ -607,8 +607,7 @@ utils.debug(
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>_prefix</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)
-            = <code>&quot;&quot;</code>)</code>
+            <span class='code bold'>_prefix</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)?)</code>
 	    Any relevant text in the begining of the file name. If it is leaved empty, the file name will be Year-Month-Day_Hour-Minute-Second.PNG
 
           </div>
@@ -618,7 +617,7 @@ utils.debug(
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>_suffix</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
-            = <code>&quot;png&quot;</code>)</code>
+            = <code>png</code>)</code>
 	    The file extension JPG, PNG, ...
 
           </div>
@@ -734,10 +733,6 @@ utils.debug(
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L285-L294'>
-      <span>src/p5.utils.js</span>
-      </a>
-    
   </div>
   
 
@@ -838,14 +833,241 @@ print(arr);</pre>
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='creategrid'>
+      createGrid
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Returns an array of object that holds position and size information for each grid element. Fills the grid row by row.</p>
+
+    <div class='pre p1 fill-light mt0'>createGrid(_row: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _col: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _totalW: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _totalH: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _margin: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _type: const, _alignX: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, _alignY: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_row</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    Number of rows
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_col</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    Number of columns
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_totalW</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    The width of total grid space
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_totalH</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    The height of total grid space
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_margin</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
+            = <code>0</code>)</code>
+	    Gap between each grid element
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_type</span> <code class='quiet'>(const
+            = <code>GRID.SQUARE</code>)</code>
+	    The w/h ratio of the each grid. If you want to create rectangular grids you can use 
+<code>GRID.RECT</code>
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_alignX</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>
+            = <code>false</code>)</code>
+	    Alignment on the x-axis according to the width of the canvas
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_alignY</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>
+            = <code>false</code>)</code>
+	    Alignment on the y-axis according to the height of the canvas
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>></code>:
+        The returned object includes {x,y,w,h}
+
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// Coming soon... to do</span></pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='debuggrid'>
+      debugGrid
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Displays the grid tiles of <a href="#creategrid">createGrid</a> and index of each gridItem.</p>
+
+    <div class='pre p1 fill-light mt0'>debugGrid(_fz: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, _colorTxt: p5.Color, _colorBorder: p5.Color)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_fz</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>
+            = <code>10</code>)</code>
+	    Id font-size.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_colorTxt</span> <code class='quiet'>(p5.Color
+            = <code>color(0)</code>)</code>
+	    Id Text Color.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_colorBorder</span> <code class='quiet'>(p5.Color
+            = <code>color(0,200)</code>)</code>
+	    Grid Color.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='beginshadow'>
       beginShadow
     </h3>
     
-    
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L318-L324'>
-      <span>src/p5.utils.js</span>
-      </a>
     
   </div>
   
@@ -958,10 +1180,6 @@ print(arr);</pre>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L332-L334'>
-      <span>src/p5.utils.js</span>
-      </a>
-    
   </div>
   
 
@@ -1019,10 +1237,6 @@ print(arr);</pre>
       beginRadialGradient
     </h3>
     
-    
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L372-L405'>
-      <span>src/p5.utils.js</span>
-      </a>
     
   </div>
   
@@ -1153,7 +1367,7 @@ Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRende
      height*<span class="hljs-number">0.5</span> + <span class="hljs-number">100</span>,
      <span class="hljs-number">400</span>);
  circle(width*<span class="hljs-number">0.5</span>, height*<span class="hljs-number">0.5</span>,<span class="hljs-number">400</span>);
- utils.endRadialGradient();        
+ utils.endRadialGradient();
 
 }</pre>
     
@@ -1180,10 +1394,6 @@ Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRende
       endRadialGradient
     </h3>
     
-    
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L414-L416'>
-      <span>src/p5.utils.js</span>
-      </a>
     
   </div>
   
@@ -1242,10 +1452,6 @@ Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRende
       beginLinearGradient
     </h3>
     
-    
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L467-L484'>
-      <span>src/p5.utils.js</span>
-      </a>
     
   </div>
   
@@ -1355,7 +1561,7 @@ Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRende
   <span class="hljs-comment">// Begin gradient fill</span>
   utils.beginLinearGradient(
     [<span class="hljs-string">&quot;#FFCC00&quot;</span>, color(<span class="hljs-number">34</span>, <span class="hljs-number">116</span>, <span class="hljs-number">165</span>), color(<span class="hljs-number">126</span>, <span class="hljs-number">161</span>, <span class="hljs-number">114</span>)],<span class="hljs-comment">//Colors</span>
-    width * <span class="hljs-number">0.5</span> - <span class="hljs-number">100</span>,    <span class="hljs-comment">// gradient begin point x     </span>
+    width * <span class="hljs-number">0.5</span> - <span class="hljs-number">100</span>,    <span class="hljs-comment">// gradient begin point x</span>
     height * <span class="hljs-number">0.5</span> - <span class="hljs-number">100</span>,   <span class="hljs-comment">// gradient begin point y</span>
     width * <span class="hljs-number">0.5</span> + <span class="hljs-number">100</span>,    <span class="hljs-comment">// gradient end point x</span>
     height * <span class="hljs-number">0.5</span> + <span class="hljs-number">100</span>,   <span class="hljs-comment">// gradient end point y</span>
@@ -1396,10 +1602,6 @@ Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRende
       endLinearGradient
     </h3>
     
-    
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L492-L494'>
-      <span>src/p5.utils.js</span>
-      </a>
     
   </div>
   
@@ -1461,10 +1663,6 @@ Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRende
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L508-L527'>
-      <span>src/p5.utils.js</span>
-      </a>
-    
   </div>
   
 
@@ -1525,7 +1723,7 @@ Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRende
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>_font</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
-            = <code>&quot;sans-serif&quot;</code>)</code>
+            = <code>sans-serif</code>)</code>
 	    Custom Font face. See example 
 <a href="#gettimestamp">getTimeStamp</a>
 
@@ -1587,10 +1785,6 @@ Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRende
       notify
     </h3>
     
-    
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L540-L549'>
-      <span>src/p5.utils.js</span>
-      </a>
     
   </div>
   
@@ -1680,16 +1874,12 @@ Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRende
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L596-L606'>
-      <span>src/p5.utils.js</span>
-      </a>
-    
   </div>
   
 
   <p>Customize the pixel ruler style. Set the colors and font options. Also customizes the <a href="#debug">debug</a> background and text colors.</p>
 
-    <div class='pre p1 fill-light mt0'>setRulerStyle(_p5rulerBgColor: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, _p5rulerTxtColor: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, _p5rulersize: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _p5rulerInfoColor: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, _p5rulerInfoBgColor: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, _p5rulerTickColor: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, _p5rulerFont: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+    <div class='pre p1 fill-light mt0'>setRulerStyle(_p5rulerBgColor: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, _p5rulerTxtColor: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, _p5rulersize: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, _p5rulerInfoColor: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, _p5rulerInfoBgColor: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, _p5rulerTickColor: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, _p5rulerFont: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, _p5rulerInfoEnable: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</div>
   
   
 
@@ -1707,7 +1897,7 @@ Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRende
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>_p5rulerBgColor</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
-            = <code>&quot;rgba(30,30,30,1)&quot;</code>)</code>
+            = <code>rgba(30,30,30,1)</code>)</code>
 	    Pixel Ruler Background color.
 
           </div>
@@ -1717,7 +1907,7 @@ Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRende
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>_p5rulerTxtColor</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
-            = <code>&quot;rgba(150,150,150,1)&quot;</code>)</code>
+            = <code>rgba(150,150,150,1)</code>)</code>
 	    Text Color on the Pixel Puler.
 
           </div>
@@ -1737,7 +1927,7 @@ Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRende
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>_p5rulerInfoColor</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
-            = <code>&quot;rgba(30,30,30,1)&quot;</code>)</code>
+            = <code>rgba(30,30,30,1)</code>)</code>
 	    Info Text Color following the mouse cursor.
 
           </div>
@@ -1747,7 +1937,7 @@ Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRende
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>_p5rulerInfoBgColor</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
-            = <code>&quot;rgba(255,255,255,0.5)&quot;</code>)</code>
+            = <code>rgba(255,255,255,0.5)</code>)</code>
 	    Info Text Background color.
 
           </div>
@@ -1757,7 +1947,7 @@ Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRende
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>_p5rulerTickColor</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
-            = <code>&quot;rgba(255,0,0,1)&quot;</code>)</code>
+            = <code>rgba(255,0,0,1)</code>)</code>
 	    Ticker Color that projects the mouse cursor on top and left ruler bar.
 
           </div>
@@ -1767,8 +1957,18 @@ Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRende
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>_p5rulerFont</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
-            = <code>&quot;11px monospace&quot;</code>)</code>
+            = <code>11pxmonospace</code>)</code>
 	    Overall font size and font-family of the Pixel Ruler.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_p5rulerInfoEnable</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>
+            = <code>true</code>)</code>
+	    Show / hide info text nect to mouse cursor
 
           </div>
           
@@ -1802,7 +2002,7 @@ Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRende
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
      createCanvas(<span class="hljs-number">400</span>,<span class="hljs-number">400</span>);
-     
+
      <span class="hljs-comment">// Set styling before the enabling the ruler</span>
      utils.setRulerStyle(
          <span class="hljs-string">&quot;rgba(200,200,200,1)&quot;</span>, <span class="hljs-comment">// Ruler Bg Color</span>
@@ -1810,10 +2010,11 @@ Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRende
          <span class="hljs-number">20</span>,                    <span class="hljs-comment">// Ruler Size</span>
          <span class="hljs-string">&quot;rgba(200,200,200,1)&quot;</span>, <span class="hljs-comment">// Info Text Color following the mouse cursor</span>
          <span class="hljs-string">&quot;rgba(5,5,5,0.7)&quot;</span>,     <span class="hljs-comment">// Info Text Background Color</span>
-         <span class="hljs-string">&quot;rgba(0,255,0,1)&quot;</span>,    <span class="hljs-comment">// Ticker Color that projects the mouse cursor on top and left ruler bar</span>
-         <span class="hljs-string">&quot;10px monospace&quot;</span>      <span class="hljs-comment">// Overall font size and font family</span>
-     );    
-     
+         <span class="hljs-string">&quot;rgba(0,255,0,1)&quot;</span>,     <span class="hljs-comment">// Ticker Color that projects the mouse cursor on top and left ruler bar</span>
+         <span class="hljs-string">&quot;10px monospace&quot;</span>,      <span class="hljs-comment">// Overall font size and font family</span>
+         <span class="hljs-literal">false</span>                  <span class="hljs-comment">// Display info card next to cursor. By default it&#x27;s true</span>
+     );
+
      <span class="hljs-comment">// No need to run in draw function</span>
      <span class="hljs-comment">// The function creates its canvases in a different drawing context</span>
      utils.enableRuler();
@@ -1853,10 +2054,6 @@ Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRende
       disableRuler
     </h3>
     
-    
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L613-L628'>
-      <span>src/p5.utils.js</span>
-      </a>
     
   </div>
   
@@ -1918,10 +2115,6 @@ Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRende
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/alptugan/p5.utils/blob/cf977778c1a8d56ddb31c437d21f496ed5c4d4be/src/p5.utils.js#L657-L776'>
-      <span>src/p5.utils.js</span>
-      </a>
-    
   </div>
   
 
@@ -1965,7 +2158,7 @@ Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRende
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
      createCanvas(<span class="hljs-number">400</span>,<span class="hljs-number">400</span>);
-     
+
      <span class="hljs-comment">// No need to run in draw function</span>
      <span class="hljs-comment">// The function creates its canvases in a different drawing context</span>
      utils.enableRuler();
