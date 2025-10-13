@@ -13,7 +13,7 @@ function setup() {
         "rgba(5,5,5,0.7)", // Info Text Background Color
         "rgba(255,0,0,1)", // Ticker Color that projects the mouse cursor on top and left ruler bar
         "10px monospace", // Overall font size and font family
-        false // Set true or false, to hide/show info card next to mouse cursor. By default it is true.
+        true // Set true or false, to hide/show info card next to mouse cursor. By default it is true.
     );
     // Call the method "enableRuler()"
     // to display pixel ruler
